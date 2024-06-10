@@ -1,0 +1,31 @@
+.product-form {
+  width: 30rem;
+  margin: 2rem auto;
+  max-width: 80%;
+}
+
+.form-control label,
+.form-control input {
+  display: block;
+  width: 100%;
+}
+
+.form-control input {
+  font: inherit;
+  padding: 0.1rem 0.25rem;
+  border: none;
+  border-bottom: 2px solid #eeeeee;
+  margin-bottom: 1rem;
+  color: #616161;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-bottom-color: #1e88e5;
+}
+
+.product__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
