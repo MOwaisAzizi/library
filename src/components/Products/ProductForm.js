@@ -18,25 +18,20 @@ const ProductForm = React.memo((props) => {
       <Card>
         <form onSubmit={submitHandler}>
           <div className="form-control">
-            <label htmlFor="title">عنوان</label>
+            <label htmlFor="title">Title</label>
             
             <input type="text" id="title" value={title} 
             onChange={(event) => settitle(event.target.value) } />
 
-            {/* <input type="text" id="title" value={inputstate.title} 
-            onChange={(event) => setinputstate({title : event.target.value , amount : inputstate.amount}) } /> */}
           </div>
           <div className="form-control">
-            <label htmlFor="amount">تعداد</label>
+            <label htmlFor="amount">Amount</label>
             <input type="number" id="amount" value={amount} 
             onChange={(event) => setamount(event.target.value) } /> 
 
-            {/* <input type="number" id="amount" value={inputstate.amount} 
-            onChange={(event) => setinputstate({amount:event.target.value , title:inputstate.title}) } /> */}
-          
           </div>
           <div className="product-form__actions">
-            <button type="submit" >افزودن</button>
+            <button type="submit" >Add</button>
           </div>
         </form>
       </Card>

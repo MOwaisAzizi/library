@@ -13,7 +13,6 @@ const productraducer =(state,action)=>{
   }
 }
 const Products = ()=> {
-// const [products,setproducts] = useState([])
  const [products,dispath] = useReducer(productraducer,[])
 
 //callback prevent from repeating
@@ -21,23 +20,6 @@ const seacrhproductHandler = useCallback( (items)=>{
 // setproducts(items)
    dispath({type : 'SET' , products : items})
 },[])
-// useEffect(()=>{
-//   fetch('https://react-redux-main-c91c4-default-rtdb.firebaseio.com/products.json').then((response)=>{
-//     return response.json()
-//   })
-//   .then((responsedata)=>{
-//     let LoadProducts = []
-//     for(const item in responsedata){
-//       LoadProducts.push({
-//         title : responsedata[item].title,
-//         id : responsedata[item].id
-//       })
-//     }
-//     setproducts(LoadProducts)
-//   })
-  
-// },[])
-
 
 const Addproducthandler = (item) => {
   fetch('https://react-redux-main-c91c4-default-rtdb.firebaseio.com/products.json',{
@@ -46,15 +28,7 @@ const Addproducthandler = (item) => {
     headers :{'Content-Type': 'application/json'},
   }).then((response) => {
     response.json().then((responsedata) => {
-      // setproducts((prevstate) => {
-      //   return[
-      //     ...prevstate,
-      //     {
-      //       id: responsedata.name,
-      //       ...item
-      //     }
-      //   ]
-      //   })
+
      dispath({
       type:'ADD',
       product:{id:responsedata.name,...item}

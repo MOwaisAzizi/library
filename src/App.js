@@ -17,7 +17,7 @@ if(authcontext.isAuth){
    color: theme=='dark'  ?'white': 'black'
    }}>
  <Products/>
- <button onClick={toggleTheme} className='buttontam'>تعغیر تم</button>
+ <button onClick={toggleTheme} className='buttontam'>Change Theme</button>
   </div>
   )
 }

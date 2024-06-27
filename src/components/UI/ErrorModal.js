@@ -7,11 +7,11 @@ const ErrorModal = React.memo((props) => {
     <React.Fragment>
       <div className="backdrop" onClick={props.onClose} />
       <div className="error-modal">
-        <h2>پیغام خطا</h2>
+        <h2> Error Message</h2>
         <p>{props.children}</p>
         <div className="error-modal__actions">
           <button type="button" onClick={props.onClose}>
-            باشه
+            OK
           </button>
         </div>
       </div>

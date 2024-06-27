@@ -13,8 +13,8 @@ const Auth = (props) => {
   return (
     <div className="auth">
       <Card>
-        <p>لطفا برای ادامه وارد شوید.</p>
-        <button onClick={loginHandler}>ورورد</button>
+        <p>Please click to enter</p>
+        <button onClick={loginHandler}>Enter</button>
       </Card>
     </div>
   )

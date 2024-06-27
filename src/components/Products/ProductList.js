@@ -5,7 +5,7 @@ import './ProductList.css'
 const ProductList = (props) => {
   return (
     <section className="product-list">
-      <h2>محصولات</h2>
+      <h2>Products</h2>
       <ul>
         {props.products.map((item) => (
           <li key={item.id} onClick={props.onRemoveItem.bind(this, item.id)}>

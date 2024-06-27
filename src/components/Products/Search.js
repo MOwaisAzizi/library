@@ -28,7 +28,6 @@ const Search = React.memo((props) => {
         })
       }
       },500)
-      //after first useeffect clear timer
    return ()=>{
     clearTimeout(timer)
    }
@@ -40,7 +39,7 @@ const Search = React.memo((props) => {
     <section className="search">
       <Card>
         <div className="search-input">
-          <label>جست و جو</label>
+          <label>Search</label>
           <input type="text" value={searchitem} onChange = {(event) => setsearchitem(event.target.value)} ref={inputref}/>
         </div>
       </Card>
