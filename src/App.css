@@ -1,6 +1,5 @@
-buttontam{
-    margin: auto;
-    text-align: center;
+.buttontam{
+    margin-right: 10px;
 }.app{
-    height: 100vh;
+    height: 100%;
 }

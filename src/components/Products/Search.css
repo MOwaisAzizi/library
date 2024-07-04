@@ -6,14 +6,16 @@
 
 .search-input {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   flex-direction: column;
+}.search-input label{
+  margin-left: 5px;
 }
 
 .search-input input {
   font: inherit;
-  border: 1px solid #eeeeee;
+  border: 1px solid #837575;
   border-radius: 5px;
   padding: 0.15rem 0.25rem;
   color: #616161;

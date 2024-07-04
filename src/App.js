@@ -3,6 +3,7 @@ import Products from './components/Products/Products'
 import Auth from './components/Auth'
 import { AuthContext } from './components/Auth-Context/Auth-context'
 import UseDarkMode  from './hooks/Dark-mode'
+import './App.css'
 
 const App = (props) => {
  
@@ -23,7 +24,6 @@ if(authcontext.isAuth){
 }
 
   return content
-
 
 }
 
