@@ -1,7 +1,5 @@
 import React,{useState} from 'react'
-
 import Card from '../UI/Card'
-
 import './ProductForm.css'
 
 const ProductForm = React.memo((props) => {

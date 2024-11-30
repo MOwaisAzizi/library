@@ -22,9 +22,7 @@ if(authcontext.isAuth){
   </div>
   )
 }
-
   return content
-
 }
 
 export default App

@@ -15,9 +15,7 @@ const productraducer =(state,action)=>{
 const Products = ()=> {
  const [products,dispath] = useReducer(productraducer,[])
 
-//callback prevent from repeating
 const seacrhproductHandler = useCallback( (items)=>{
-// setproducts(items)
    dispath({type : 'SET' , products : items})
 },[])
 
@@ -35,8 +33,6 @@ const Addproducthandler = (item) => {
      })
     })
   })
-
-
 }
   return (
     <div className="App">
