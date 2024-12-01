@@ -12,7 +12,6 @@ const Search = React.memo((props) => {
       if(searchitem === inputref.current.value){
         const query = searchitem.length=== 0 ? '' :
         `?orderBy="title"&equalTo="${searchitem}"`
-    
         fetch('https://react-redux-main-c91c4-default-rtdb.firebaseio.com/products.json'+query).then((response)=>{
           return response.json()
         })
@@ -46,5 +45,4 @@ const Search = React.memo((props) => {
     </section>
   )
 })
-
 export default Search
