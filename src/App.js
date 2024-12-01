@@ -2,26 +2,27 @@ import React, { useContext, useState } from 'react'
 import Products from './components/Products/Products'
 import Auth from './components/Auth'
 import { AuthContext } from './components/Auth-Context/Auth-context'
-import UseDarkMode  from './hooks/Dark-mode'
+import UseDarkMode from './hooks/Dark-mode'
 import './App.css'
 
-const App = (props) => {
- 
-const[theme,toggleTheme] = UseDarkMode()
+const App = () => {
+
+  const [theme, toggleTheme] = UseDarkMode()
 
   const authcontext = useContext(AuthContext)
-let content = <Auth/>
-if(authcontext.isAuth){
-  content =(
-  <div className='app'
-   style={{ background : theme=='dark'  ?'black': 'white',
-   color: theme=='dark'  ?'white': 'black'
-   }}>
- <Products/>
- <button onClick={toggleTheme} className='buttontam'>Change Theme</button>
-  </div>
-  )
-}
+  let content = <Auth />
+  if (authcontext.isAuth) {
+    content = (
+      <div className='app'
+        style={{
+          background: theme == 'dark' ? 'black' : 'white',
+          color: theme == 'dark' ? 'white' : 'black'
+        }}>
+        <Products />
+        <button onClick={toggleTheme} className='buttontam'>Change Theme</button>
+      </div>
+    )
+  }
   return content
 }
 

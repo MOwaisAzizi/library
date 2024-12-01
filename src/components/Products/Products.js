@@ -26,7 +26,6 @@ const Addproducthandler = (item) => {
     headers :{'Content-Type': 'application/json'},
   }).then((response) => {
     response.json().then((responsedata) => {
-
      dispath({
       type:'ADD',
       product:{id:responsedata.name,...item}
